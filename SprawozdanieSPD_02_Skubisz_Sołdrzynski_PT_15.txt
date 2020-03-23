@@ -16,8 +16,9 @@ zwracana przez dany subproblem.
 Jego główną ideą jest zastosowanie podejścia bottom-up, gdzie rozwiązujemy podproblemy najmniejsze i stopniowo w następnych iteracjach
 przechodzimy do większych, aż do rozwiązania głównego problemu, przy czym wszystkie wyliczone wartości podproblemów zapisujemy w tablicy.
 Dla naszego zadania wygląda to następująco:
-	- Algorytm zaczyna badać optymalne kary dla kombinacji, zgodnie z inkrementacją liczby całkowitej int, którą interpretujemy binarnie jako kombinacje zadań.
-Isotnym założeniem jest to że zapisuje on informacje o optymalnym rozwiązaniu podproblemu w odpowiadającej komórce w tablicy kar.
+	- Algorytm zaczyna badać optymalne kary (wyliczane na podstawie czasu porządanego skonczenia zadania, oraz czasu realnego jego trwania) dla kombinacji,
+zgodnie z inkrementacją liczby całkowitej int, którą interpretujemy binarnie jako kombinacje zadań. Isotnym założeniem jest to że zapisuje on informacje o
+optymalnym rozwiązaniu podproblemu w odpowiadającej komórce w tablicy kar.
 
 	- Algorytm natrafia na wszystkie możliwe kombinacje szeregów zadań, więc bada które podzadania należą do danej
 kombinacji (wyrzuca on przy tym jedno z zadań dla którego badana jest kara), "wyciąga" karę zapisaną w danej komórce w tablicy odpowiadającej danej kombinacji,
