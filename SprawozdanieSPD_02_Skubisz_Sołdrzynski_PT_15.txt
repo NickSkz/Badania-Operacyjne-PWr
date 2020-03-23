@@ -1,0 +1,23 @@
+Sprawozdanie wiTi;
+
+Mikołaj Skubisz, Filip Sołdrzyński,
+Termin oddania: 23.03.2020,
+Ćwiczenie nr 2,
+Sugerowana ocena: 3.0
+
+Opis algorytmu programowania dynamicznego:
+
+Ogólrne rzecz biorąc algorytm programowania dynamicznego stosuje się gdy mamy problem, który można rozbić na  podproblemy.
+Pozwala on na uniknięcie rekurencji, a przez to też efektywizuje obliczenia, gdyż obliczone rezultaty podproblemów zapisujemy
+w danej strukturze danych (np. tablicy), więc unikamy problemu występującego w rekursji, gdzie obliczana jest kilka razy wartość 
+zwracana przez dany subproblem.
+Jego główną ideą jest zastosowanie podejścia bottom-up, gdzie rozwiązujemy podproblemy najmniejsze i stopniowo w następnych iteracjach
+przechodzimy do większych, aż do rozwiązania głównego problemu, przy czym wszystkie wyliczone wartości podproblemów zapisujemy w tablicy.
+Dla naszego zadania wygląda to następująco:
+	- Algorytm zaczyna badać optymalne kary dla kombinacji, zgodnie z inkrementacją liczby całkowitej int, którą interpretujemy binarnie jako kombinacje zadań.
+Isotnym założeniem jest to że zapisuje on informacje o optymalnym rozwiązaniu podproblemu w odpowiadającej komórce w tablicy kar.
+	- Algorytm natrafia na wszystkie możliwe kombinacje szeregów zadań, więc bada które podzadania należą do danej
+kombinacji (wyrzuca on przy tym jedno z zadań dla którego badana jest kara), "wyciąga" karę zapisaną w danej komórce w tablicy odpowiadającej danej kombinacji,
+uwzględnia karę wynikającą z nowego zadania, po czym szuka minimum z potencjalnych kar - wynik zapisuje w komórce odpowiedniej dla danej kombinacji. 
+	- Proces trwa dalej aż dojdziemy do głównego problemu - optymalnej kary dla wszystkich zadań (1111...111). Algorytm minimalizuje karę jak w
+poprzednim podpunkcie, więc optymalna suma wiTi zostaje zapisana w ostatniej komórce tablicy.
