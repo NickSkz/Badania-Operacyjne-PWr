@@ -1,0 +1,15 @@
+Grupa:
+	Mikołaj Skubisz
+	Filip Sołdrzyński
+
+Termin oddania:
+	23.04.20 (oficialny termin: 17.04)
+
+Ćwiczenie:
+	nr 3, NEH
+
+Czas wykonywania algorytmu dla 120 problemów:
+	29.33 min
+
+Sugerowana ocena:
+	3.0
