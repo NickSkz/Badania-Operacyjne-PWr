@@ -108,9 +108,9 @@ int checkTimes(int maschinen, vector<vector<int>>& permutacion, vector<vector<in
 				time[0][0] = permutacion[0][0];
 			else {
 				//Jesli zadanie poprzednie juz zeszlo z maszyny - mozemy umieszczać
+				//Jezeli na maszynie siedzi tam jeszcze wczesniejsze zadanie -> time = time zad + czas skonczenia poprzedniego zadania na maszynine
 				if (time[i][j - 1] < time[i - 1][j])
 					time[i][j] = permutacion[i][j] + time[i - 1][j];
-				//Jezeli na maszynie siedzi tam jeszcze wczesniejsze zadanie -> time = time zad + czas skonczenia poprzedniego zadania na maszynine
 				else
 					time[i][j] = permutacion[i][j] + time[i][j - 1];
 			}
